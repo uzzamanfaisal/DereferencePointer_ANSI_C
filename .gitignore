@@ -1,29 +1,24 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include <stdio.h>
+#include <stdlib.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+    // example of derefrencing a pointer
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+int main()
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+{
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+  char *p_ch;
+  char ch1 = 'A';
+  char ch2;
+
+  printf("The address of p_ch is:%p\n",&p_ch);
+
+  p_ch = &ch1;
+  //ch2 = *p_ch;
+  printf("The value stored at p_ch is:%p\n",p_ch);
+
+  //ch2 = *p_ch;
+  printf("The dereference value of p_ch is %c\n",*p_ch);
+  //ch2 = *p_ch;
+
+    return 0;
